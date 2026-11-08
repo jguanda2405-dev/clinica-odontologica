@@ -67,8 +67,19 @@ $(document).ready(function() {
         }, 'json');
     }
 
+        // Activa el botón de PDF solo cuando hay un paciente elegido
+    function actualizarBotonPdf() {
+        let paciente_id = $('#paciente_id').val();
+        if (paciente_id === '') {
+            $('#btn-pdf').addClass('disabled').attr({'href': '#', 'aria-disabled': 'true'});
+        } else {
+            $('#btn-pdf').removeClass('disabled').attr({'href': 'pdf/generar_pdf.php?paciente_id=' + paciente_id, 'aria-disabled': 'false'});
+        }
+    }
+
     // ---------- LISTAR la historia del paciente elegido ----------
     function listar() {
+        actualizarBotonPdf();
         let paciente_id = $('#paciente_id').val();
 
         if (paciente_id === '') {

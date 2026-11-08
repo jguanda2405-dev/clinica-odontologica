@@ -31,7 +31,10 @@ include_once('includes/menu.php');
         <!-- Tabla de la historia (izquierda) -->
         <div class="col-lg-8 mb-4">
             <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
+                    <div class="card-header bg-primary text-white">
+                    <a id="btn-pdf" href="#" target="_blank" class="btn btn-light btn-sm float-right disabled" aria-disabled="true">
+                        <i class="fa fa-file-pdf-o"></i> Generar PDF
+                    </a>
                     <h5 class="mb-0"><i class="fa fa-file-text-o"></i> Historia clínica</h5>
                 </div>
                 <div class="card-body p-0">

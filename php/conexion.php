@@ -2,10 +2,10 @@
 
 mysqli_report(MYSQLI_REPORT_OFF); 
 
-$servidor = "localhost"; 
-$usuario = "root"; 
-$password = ""; 
-$database = "clinica_db"; 
+$servidor = "localhost";
+$usuario  = "root";
+$password = "";
+$database = "clinica_db";
 
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $database); 
